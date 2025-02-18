@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Layout</title>
+    <style>
+       
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 150px auto;
+            grid-template-rows: 60px auto 60px;
+            height: 150vh;
+        }
+        .Heading{
+            align-items: center;
+            align-content: center;
+            background-color: pink;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            }
+    
+           
+        .header {
+            background: aqua;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            grid-column: span 2;
+            padding: 10px;
+        }
+
+        .header button {
+            background: red;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .header button:hover {
+            background-color: darkred;
+            transform: scale(1.1);
+        }
+
+        .sidebar {
+            background: firebrick;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            padding: 10px;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: black;
+            padding: 10px;
+            background: gold;
+            border-radius: 5px;
+            text-align: center;
+            display: block;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .sidebar button:hover {
+            background-color: gold;
+            transform: scale(1.1);
+
+        }
+
+        .sidebar a.active {
+            background: black;
+            color: white;
+        }
+
+        
+        .main {
+            background: #eaf3d9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .tickets {
+            background: #5acddfbe;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .book-now {
+            color: goldenrod;
+        }
+        
+        .footer {
+            background: rgb(132, 132, 211);
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 10px;
+            gap: 10px;
+            grid-column: span 2;
+        }
+
+        .footer img {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        .footer-box {
+            width: 20px;
+            height: 20px;
+            background: white;
+            display: inline-block;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+       
+           
+.logo {
+    height: 35px;
+    width: 35px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.input {
+    padding: 5px;
+    margin-left: 10px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    border-radius: 5px;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {
+    display: none;
+    background-color: #f1f1f1;
+}
+    </style>
+    <div class="search-container">
+        <img src="ipl.png" alt="website logo" class="logo">
+        <div class="search-bar">
+            <input type="text" placeholder="Search..." class="input">
+            <button>Go</button>
+        </div>
+    </div>
+
+    </style>
+</head>
+<body>
+    <div  class="Heading">IPL Tickets Booking...</div>
+   
+    <div class="container">
+        
+        <header class="header">
+            <div class="dropdown">
+                <button><a href="https://www.iplt20.com/matches/results" target="_blank"  style="text-decoration: none;">Matches</a></button>
+            </div>
+            
+            <div class="dropdown">
+               <button><a href="https://www.iplt20.com/videos/all" target="_blank"  style="text-decoration: none;">Videos</a></button>
+            </div>
+            <div class="dropdowm">
+                <button><a href="https://www.iplt20.com/stats/2024" target="_blank"  style="text-decoration: none;">Stats</a></button>
+            </div>
+           <div class="dropdown">
+            <button><a href="https://www.iplt20.com/points-table/men" target="_blank" style="text-decoration: none;">Points Table</a></button>
+           </div>
+           <div class="dropdown">
+            <button><a href="https://www.iplt20.com/auction" target="_blank"  style="text-decoration: none;">Auction</a></button>
+           </div>
+           <div class="dropdown">
+            <button><a href="https://www.iplt20.com/news" target="_blank"  style="text-decoration: none;">News</a></button>
+           </div>
+           <div class="dropdown">
+            <button><a href="https://www.iplt20.com/about/about-us" target="_blank"  style="text-decoration: none;">More</a></button>
+           </div>
+        </header>
+
+        
+        <nav class="sidebar">
+          <button>   <a href="https://www.royalchallengers.com/" target="_blank">RCB</a></button>
+           <button>  <a href="https://www.chennaisuperkings.com/" target="_blank">CSK</a></button>
+           <button>  <a href="https://www.mumbaiindians.com/" target="_blank">MI</a></button>
+           <button>  <a href="https://www.kkr.in/" target="_blank">KKR</a></button>
+           <button>  <a href="https://www.rajasthanroyals.com/" target="_blank">RR</a></button>
+           <button> <a href="https://www.gujarattitansipl.com/" target="_blank">GT</a></button>
+           <button> <a href="https://www.punjabkingsipl.in/" target="_blank">PBKS</a></button>
+           <button> <a href="https://www.sunrisershyderabad.in/" target="_blank">SRH</a></button>
+           <button> <a href="https://www.lucknowsupergiants.in/" target="_blank">LSG</a></button>
+           <button> <a href="https://www.delhicapitals.in/" target="_blank">DC</a></button>
+        </nav>
+
+       
+        <main class="main">
+           
+            <div class="grid-container">
+                <div class="tickets">M CHINNASWAMY STADIUM BENGALURU 
+                  <nav class="book-now"> <a href="https://in.bookmyshow.com/sports/tata-wpl-2025-bengaluru/ET00431341">Book Tickets Now</a></nav>
+                 </div>
+                <div class="tickets">M CHIDAMBARAM STADIUM CHENNAI 
+                    <nav class="book-now"></nav>
+                        <a href="#" onclick="alert('Tickets Not Available! Sorry...')">Book Tickets Now</a>
+                    </nav>
+                </div>
+                <div class="tickets">WANKHEDE STADIUM MUMBAI 
+                    <nav class="book-now"><a href="https://in.bookmyshow.com/sports/royal-challengers-bengaluru-vs-mumbai-indians/ET00431305">Book Tickets Now</a></nav>
+                </div>
+                <div class="tickets">EDEN GARDENS KOLKATA 
+                    <nav class="book-now"><a href="#" onclick="alert('Tickets Not Available! Sorry...')">Book Tickets Now</a></nav>
+                </div>
+                <div class="tickets">SAWAI MANSINGH STADIUM JAIPUR 
+                    <nav class="book-now"><a href="#" onclick="alert('Tickets Not Available! Sorry...')">Book Tickets Now</a></nav>
+                </div>
+                <div class="tickets">NARENDRA MODI STADIUM GUJARAT 
+                    <nav class="book-now"><a href="https://in.bookmyshow.com/sports/gujarat-giants-vs-mumbai-indians/ET00431141">Book Tickets Now</a></nav>
+                </div>
+                <div class="tickets">MOHALI CRICKET STADIUM PUNJAB 
+                    <nav class="book-now"><a href="#" onclick="alert('Tickets not Available! Sorry...')">Book Tickets Now</a></nav>
+                </div>
+                <div class="tickets">RAJIV GANDHI STADIUM HYDERABAD 
+                    <nav class="book-now"><a href="#" onclick="alert('Tickets not Available! Sorry...')">Book Tickets Now</a></nav>
+                </div>
+                <div class="tickets">EKANA STADIUM LUCKNOW 
+                    <nav class="book-now"><a href="#" onclick="alert('Tickets not Available! Sorry...')">Book Tickets Now</a></nav>
+                </div>
+                <div class="tickets">ARUN JAITLEY STADIUM DELHI
+                    <nav class="book-now"><a href="https://in.bookmyshow.com/sports/up-warriorz-vs-delhi-capitals/ET00431142">Book Tickets Now</a></nav>
+                </div>
+                
+            </div>
+        </main>
+
+        
+        <footer class="footer">
+            <a href="">For more information, Follow us on:</a>
+            <a href="https://www.instagram.com/iplt20/" class="footer-box"><img src="insta.png" alt="Instagram"></a>
+            <a href="https://www.facebook.com/IPL" class="footer-box"><img src="fb.avif" alt="Facebook"></a>
+            <a href="https://x.com/IPL" class="footer-box"><img src="twitter.png" alt="Twitter"></a>
+           
+            
+    </div>
+    
+</body>
+</html>
